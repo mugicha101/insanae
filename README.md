@@ -1,7 +1,11 @@
-# Game Boy Emulator Dependencies
+# Game Boy Emulator
+## Dependencies
 - Git
 - CMake
 - C++
+
+## CPU Reference
+[link to GameBoy CPU Manual pdf](http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf)
 
 # CMake SFML Project Template
 

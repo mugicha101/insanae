@@ -1,7 +1,11 @@
 #include <SFML/Graphics.hpp>
+#include "./gbfile.cpp"
+#include "iostream"
 
 int main() {
-    auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
+    GBFile testFile("test-targets/tetris.gb");
+
+    auto window = sf::RenderWindow{ { 1920u, 1080u }, testFile.getTitle() };
     window.setFramerateLimit(144);
 
     while (window.isOpen()) {
