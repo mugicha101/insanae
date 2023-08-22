@@ -6,6 +6,7 @@
 
 ## CPU Reference
 [link to GameBoy CPU Manual pdf](http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf)
+[link to another Gameboy CPU Manual pdf](https://gekkio.fi/files/gb-docs/gbctr.pdf)
 
 # CMake SFML Project Template
 

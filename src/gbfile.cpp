@@ -26,6 +26,10 @@ struct GBFile {
         bytes = std::vector<uint8_t>(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
     }
 
+    uint8_t operator[](size_t offset) const {
+        return bytes[offset];
+    }
+
     std::string getTitle() const {
         return parseString(0x134, 0x142);
     }
