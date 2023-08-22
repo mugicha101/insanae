@@ -24,11 +24,11 @@ struct Memory {
     }
 
     uint8_t read(uint16_t addr) {
-        uint32_t offset = resolve_offset(addr);
+        uint32_t offset = resolveOffset(addr);
         return (*rom)[offset];
     }
     void write(uint16_t addr, uint8_t byte) {
-        uint32_t offset = resolve_offset(addr);
+        uint32_t offset = resolveOffset(addr);
         if (offset < ROM_SIZE) {
             exit(1);
         }
