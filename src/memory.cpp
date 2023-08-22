@@ -14,7 +14,7 @@ struct Memory {
         rom = gbFile;
     }
 
-    uint32_t resolve_offset(uint16_t addr) {
+    uint32_t resolveOffset(uint16_t addr) {
         if (addr < BANK_SIZE) {
             return addr;
         }
@@ -23,11 +23,11 @@ struct Memory {
         }
     }
 
-    uint8_t readbyte(uint16_t addr) {
+    uint8_t read(uint16_t addr) {
         uint32_t offset = resolve_offset(addr);
         return (*rom)[offset];
     }
-    void writebyte(uint16_t addr, uint8_t byte) {
+    void write(uint16_t addr, uint8_t byte) {
         uint32_t offset = resolve_offset(addr);
         if (offset < ROM_SIZE) {
             exit(1);

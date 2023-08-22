@@ -40,8 +40,8 @@ public:
         clock += 4;
     }
 
-    uint8_t fetchbyte(uint16_t addr) {
-        return mem->readbyte(addr);
+    uint8_t fetchByte(uint16_t addr) {
+        return mem->read(addr);
         tick();
     }
 
@@ -52,7 +52,7 @@ public:
             for (size_t x = 0x00; x <= 0xff; ++x)
                 instrTable[x] = err;
         }
-        uint8_t opcode = fetchbyte(regs[rPC]);
+        uint8_t opcode = fetchByte(regs[rPC]);
         instrTable[opcode](regs, ram, (*mem));
     }
 };
